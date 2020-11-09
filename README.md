@@ -1,6 +1,12 @@
 # Classical_algorithm_task
 关于经典算法题解code(二分，贪心，DP，回溯，暴力，DFS,BFS，并查集...)
 
+## 18同学exp的内容，[请看这里](https://github.com/ljwwwiop/Classical_algorithm_task/tree/master/alg_exp)  
+   除了exp1的题目没写，每次上完机这里更新内容，不一定是标准解答。</br>
+   *如有测试数据没通过，及时联系我查看。*</br>
+   该目录还有大量我自己做过的题集，值得大一做，加油代码人。
+   ***
+   
 ## [DP  ->  动态规划](https://github.com/ljwwwiop/Classical_algorithm_task/tree/master/DP)
 都是从leetcode上收集的题目，也是我自己面试经验总结出来，比较常考的DP题目，基本包括所有DP类型。
 
