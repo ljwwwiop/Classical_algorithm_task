@@ -29,18 +29,19 @@ def quick_sort(num,left,right):
         quick_sort(num,p+1,right)
 
 def Binary_sort(List):
-    for i in range(1,len(List)-1):
-        index = List[i]
+    for i in range(1,len(List)):
+        povit = List[i]
         low = 0
         high = i-1
-        while(low<high):
+        while(low<=high):
             mid = (low+high)//2
-            if List[mid] >index:
+            if List[mid] >povit:
                 high = mid - 1
             else:
                 low = mid +1
         for j in range(i,low,-1):
-            List[j] = index
+            List[j] = List[j-1]
+        List[low] = povit
     return List
 
 def shell_sort(List):
