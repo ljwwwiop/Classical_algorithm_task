@@ -64,6 +64,23 @@ output:
 最大时候：从大到小比较
     
 '''
+def text3(k,nums):
+    # 前缀和
+    arr1 = nums.copy()
+    arr2 = nums.copy()
+    arr1.sort()
+    arr2.sort(reverse = True)
+    tmp = [0]*len(nums)
+    tmp[1] = arr1[0]+arr1[1]
+    print("arr1",arr1)
+    for i in range(2,len(arr1)):
+        tmp[i] = arr1[i] + tmp[i-1]
+    print("最小值：",sum(tmp) - len(tmp) + 1)
+    tmp[1] = arr2[0]+arr2[1]
+    for i in range(2,len(arr2)):
+        tmp[i] = arr2[i] + tmp[i-1]
+    print("最大值：",sum(tmp) - len(tmp) + 1)
+
 def test3_get_max(k,nums):
     res = 0
     nums.sort(reverse=True)
@@ -147,8 +164,10 @@ if __name__ == "__main__":
     k2 = 4
     num1 = [5,12,11,2]
     num2 = [5,12,11,2]
+    num3 = [5,12,11,2]
+    # 0 7 18 30
     test3_get_min(k2,num1)
     test3_get_max(k2,num2)
-
+    text3(k2,num3)
     print(test2(n,k,gas))
 

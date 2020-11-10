@@ -146,8 +146,11 @@ def coinChange3(Coins,amount,T):
 
     for i in range(n):
         for j in range(1,T[i]+1):
+            # 1 - n个硬币
             for k in range(amount,Coins[i]-1,-1):
+                # 每轮递归推算整个dp数组
                 dp[k] = min(dp[k],dp[k- Coins[i]]+1)
+            print("dp:",dp)
     
     return dp[-1] if dp[-1]!=float("inf") else -1
 
