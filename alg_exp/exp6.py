@@ -184,21 +184,35 @@ def test2(n,m):
 def test3(m,n):
     '''15 - 4 '''
     q = [m]
-    visited = []
-    s = ""
+
+    t_ = ""
+    k_ = ""
     level = 0
+    # 字符串队列保存
+    str_queue = [""]
     while q:
+        print("queue :",q)
+        print("equal :",str_queue)
         for i in range(len(q)):
-            temp = q.pop()
+            temp = q.pop(0)
+            s = str_queue.pop(0)
+            # print(temp)
             if temp == n:
-                print(level)
+                # index = q.index(temp)
+                print("level :",level)
+                print("equal :",s[::-1])
+                return
             for i in range(2):
                 if i == 0:
-                    temp = temp*3
-                    q.append(temp)
-                elif i == 1:
-                    temp = temp/2
-                    q.append(temp)
+                    t_ = s + 'f'
+                    t = temp*3
+                    q.append(t)
+                    str_queue.append(t_)
+                else:
+                    k_ = s + 'g'
+                    k = temp//2
+                    q.append(k)
+                    str_queue.append(k_)
         level+=1
 
 if __name__ == "__main__":
